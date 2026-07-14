@@ -27,7 +27,7 @@ const inter = localFont({
   ],
 });
 
-const SITE_URL = "https://tumboh-coffee-bar.vercel.app";
+const SITE_URL = "https://tumbohcoffeebar.store";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
