@@ -211,9 +211,6 @@ export default function Home() {
                 <li><span>Tue – Sun </span><span>08:00 – 22:00</span></li>
                 <li><span>Monday </span><span>Closed</span></li>
               </ul>
-              <p className={styles.hoursNote}>
-                Hours can shift on public holidays — a quick call never hurts.
-              </p>
             </div>
           </Reveal>
         </div>
