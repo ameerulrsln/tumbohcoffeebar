@@ -208,9 +208,8 @@ export default function Home() {
               <Sprout size={64} className={styles.hoursSprout} />
               <h3>Opening hours</h3>
               <ul className={styles.hoursList}>
-                <li><span>Mon – Thu</span><span>10:00 – 23:00</span></li>
-                <li><span>Fri</span><span>15:00 – 23:00</span></li>
-                <li><span>Sat – Sun</span><span>10:00 – 23:30</span></li>
+                <li><span>Tue – Sun </span><span>08:00 – 22:00</span></li>
+                <li><span>Monday </span><span>Closed</span></li>
               </ul>
               <p className={styles.hoursNote}>
                 Hours can shift on public holidays — a quick call never hurts.
