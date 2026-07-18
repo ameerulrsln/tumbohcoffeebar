@@ -305,6 +305,146 @@
   color: color-mix(in srgb, var(--sand) 72%, transparent);
 }
 
+/* sub-headings inside the dark menu block */
+.subhead {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid color-mix(in srgb, var(--sand) 18%, transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.subheadTitle {
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+  color: var(--cream);
+}
+.subheadNote {
+  max-width: 26rem;
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--sand) 72%, transparent);
+}
+
+/* CURATE */
+.curateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem clamp(2rem, 5vw, 4rem);
+}
+.curateItem { padding: 1rem 0; }
+.curateCredit {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--clay);
+}
+
+/* TEA */
+.teaList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem clamp(2rem, 5vw, 4rem);
+}
+.teaItem { padding: 0.8rem 0; }
+
+/* ============ KITCHEN ============ */
+.kitchen {
+  background: var(--espresso);
+  color: var(--sand);
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(4rem, 9vw, 7rem);
+}
+.kitchen .eyebrow { color: var(--sprout-bright); }
+.kitchen .eyebrow::before { background: var(--sprout-bright); }
+.serviceTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--sand) 22%, transparent);
+  background: color-mix(in srgb, var(--cream) 6%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--sand) 82%, transparent);
+}
+.serviceTag strong { color: var(--sprout-bright); font-weight: 600; }
+.kitchenGroups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+/* FRIDAY BREAKFAST */
+.fridayCard {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  background: var(--cream);
+  color: var(--espresso);
+  border-radius: 26px;
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+.fridayHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-bottom: 1.8rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--sand-deep);
+}
+.fridayTag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+.fridayTitle {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-top: 0.5rem;
+  color: var(--espresso);
+}
+.fridayLede {
+  margin-top: 0.7rem;
+  max-width: 34rem;
+  color: var(--bark);
+  font-size: 1rem;
+}
+.fridayMark { flex: none; }
+.fridayList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem clamp(2rem, 5vw, 3.5rem);
+}
+.fridayItem { padding: 1.1rem 0; }
+.fridayItemName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--espresso);
+}
+.fridayDots {
+  flex: 1;
+  border-bottom: 1px dotted var(--sand-deep);
+  transform: translateY(-4px);
+}
+.fridayPrice {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--sprout);
+}
+.fridayNote {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--bark);
+}
+
 /* ============ VISIT ============ */
 .visit {
   background: var(--espresso);
@@ -435,10 +575,15 @@
   .heroArt { order: -1; min-height: 240px; }
   .valueGrid { grid-template-columns: 1fr; }
   .menuCols { grid-template-columns: 1fr; }
+  .curateGrid { grid-template-columns: 1fr; }
+  .teaList { grid-template-columns: 1fr; }
+  .kitchenGroups { grid-template-columns: 1fr; }
+  .fridayList { grid-template-columns: 1fr; }
   .visitInner { grid-template-columns: 1fr; }
   .navLinks { display: none; }
 }
 @media (max-width: 560px) {
+  .fridayHead { flex-direction: column-reverse; align-items: flex-start; gap: 1rem; }
   .details { grid-template-columns: 1fr; }
   .footerInner { flex-direction: column; align-items: flex-start; }
   .footerMeta { text-align: left; }

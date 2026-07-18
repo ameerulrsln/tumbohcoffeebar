@@ -9,6 +9,10 @@
   --clay: #c66b3d;          /* warm secondary for small moments */
   --cream: #fbf7ef;         /* lightest surface */
 
+  /* Official logo greens — kept true to the printed mark */
+  --logo-green: #43b14a;
+  --logo-green-deep: #1f7a2c;
+
   --font-display: var(--font-display), Georgia, serif;
   --font-body: var(--font-body), system-ui, sans-serif;
 
